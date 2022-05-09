@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 require("dotenv/config");
 
 //Import routes
-
+const theaterRouter = require("./routes.theaters.js");
 
 
 
@@ -30,7 +30,7 @@ mongoose.connect(MONGODB_URL,{
 });
 
 //Routes
-
+app.use("/theater",theaterRouter);
 
 
 
